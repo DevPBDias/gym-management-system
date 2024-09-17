@@ -1,3 +1,5 @@
+"use client";
+
 import { LiaAmazon } from "react-icons/lia";
 import {
   LoginBtn,
@@ -6,8 +8,15 @@ import {
   ContainerForm,
   LoginLabel,
 } from "./Styles";
+import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
+  const router = useRouter();
+
+  const handleSubmit = () => {
+    router.push("/dashboard");
+  };
+
   return (
     <ContainerForm>
       <LiaAmazon style={{ color: "#faf9f9", width: 60, height: 60 }} />
@@ -19,7 +28,9 @@ const LoginForm = () => {
         <LoginLabel htmlFor="">Senha</LoginLabel>
         <LoginInput type="text" />
       </ContainerField>
-      <LoginBtn type="button">Entrar</LoginBtn>
+      <LoginBtn type="button" onClick={handleSubmit}>
+        Entrar
+      </LoginBtn>
     </ContainerForm>
   );
 };
