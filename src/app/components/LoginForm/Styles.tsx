@@ -4,7 +4,8 @@ import styled from "styled-components";
 
 export const ContainerForm = styled.form`
   color: #bf4f74;
-  margin: 1em;
+  margin: 1em auto;
+  width: 60%;
   padding: 0.25em 1em;
   border: 2px solid #bf4f74;
   border-radius: 3px;
@@ -48,7 +49,7 @@ export const LoginInput = styled.input`
   border-radius: 3px;
   width: 300px;
   &:focus {
-    outline: none !important;
+    outline: transparent;
     box-shadow: 0 0 10px #719ece;
     border-color: #7ea522;
   }
