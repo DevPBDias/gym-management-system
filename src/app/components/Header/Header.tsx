@@ -2,24 +2,25 @@ import ILinks, { navLinks } from "@/app/constants/navLinks";
 import { FaUser } from "react-icons/fa";
 import Link from "next/link";
 import { LiaAmazon } from "react-icons/lia";
+import { HeaderContainer, NavContainer } from "./Styles";
 
 const Header = () => {
   return (
-    <header>
+    <HeaderContainer>
       <picture>
-        <LiaAmazon style={{ color: "#d32020", width: 60, height: 60 }} />
+        <LiaAmazon style={{ color: "#f0e8e8", width: 48, height: 48 }} />
       </picture>
-      <nav>
+      <NavContainer>
         {navLinks.map((link: ILinks) => (
-          <Link key={link.id} href={link.path}>
+          <Link className="link" key={link.id} href={link.path}>
             {link.name}
           </Link>
         ))}
-      </nav>
-      <Link href="/profile">
-        <FaUser />
+      </NavContainer>
+      <Link className="iconContainer" href="/profile">
+        <FaUser style={{ color: "#e6dddd", width: 24, height: 24 }} />
       </Link>
-    </header>
+    </HeaderContainer>
   );
 };
 
