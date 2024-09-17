@@ -10,7 +10,7 @@ import {
 const LoginForm = () => {
   return (
     <ContainerForm>
-      <LiaAmazon style={{ color: "#bf4f74", width: 60, height: 60 }} />
+      <LiaAmazon style={{ color: "#faf9f9", width: 60, height: 60 }} />
       <ContainerField>
         <LoginLabel htmlFor="">E-mail</LoginLabel>
         <LoginInput type="text" />
